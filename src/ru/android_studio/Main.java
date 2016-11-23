@@ -12,14 +12,13 @@ import java.io.File;
 
 public class Main {
 
-    private static final String WEB_DRIVER_PATH = "/Users/yuryandreev/IBM/untitled1/";
     private static final String CHROMEDRIVER = "chromedriver";
     private static BrowserMobProxy proxy; // for use proxy, use Props proxy.enable = true
 
     public static void main(String[] args) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-        File file = new File(WEB_DRIVER_PATH + CHROMEDRIVER);
+        File file = new File(CHROMEDRIVER);
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
         ChromeOptions options = new ChromeOptions();
